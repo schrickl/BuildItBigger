@@ -3,8 +3,8 @@ package com.bill.android.jokeproviderjavalib;
 import java.util.Random;
 
 public class JokeProvider {
-    private String[] mJokes;
-    private Random mRandom;
+    private static String[] mJokes;
+    private static Random mRandom;
 
     public JokeProvider(){
         mJokes = new String[10];
@@ -32,7 +32,7 @@ public class JokeProvider {
         mRandom = new Random();
     }
 
-    public String getJoke() {
+    public static String getJoke() {
         return mJokes[mRandom.nextInt(mJokes.length)];
     }
 }
