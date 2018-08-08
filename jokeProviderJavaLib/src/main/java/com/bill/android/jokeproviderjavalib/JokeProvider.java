@@ -6,7 +6,7 @@ public class JokeProvider {
     private String[] mJokes;
     private Random mRandom;
 
-    private JokeProvider(){
+    public JokeProvider(){
         mJokes = new String[10];
         mJokes[0] = "Did you hear about the actor who fell through the floorboards?" +
                 "\n He was just going through a stage";
