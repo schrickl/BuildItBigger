@@ -15,6 +15,7 @@ import com.google.api.server.spi.config.ApiNamespace;
                 packagePath = ""
         )
 )
+
 public class MyEndpoint {
 
     @ApiMethod(name = "getJoke")
