@@ -17,7 +17,6 @@ import java.io.IOException;
 public class TellJokeTask extends AsyncTask<Context, Void, String> {
     private static MyApi myApiService = null;
     private Context context;
-    private String mJoke;
 
     @Override
     protected String doInBackground(Context... params) {
@@ -50,11 +49,10 @@ public class TellJokeTask extends AsyncTask<Context, Void, String> {
 
     @Override
     protected void onPostExecute(String result) {
-        mJoke = result;
         Toast.makeText(context, result, Toast.LENGTH_LONG).show();
 
         Intent intent = new Intent(context, JokeDisplayerActivity.class);
-        intent.putExtra(context.getResources().getString(R.string.joke_extra), mJoke);
+        intent.putExtra(context.getResources().getString(R.string.joke_extra), result);
         context.startActivity(intent);
     }
 }
