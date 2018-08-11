@@ -37,6 +37,27 @@ android {
             force 'com.android.support:appcompat-v7:27.1.1'
         }
     }
+
+    android {
+        lintOptions {
+            checkReleaseBuilds false
+            // Or, if you prefer, you can continue to check for errors in release builds,
+            // but continue the build even when errors are found:
+            abortOnError false
+        }
+    }
+
+    flavorDimensions "variant"
+    productFlavors {
+        free {
+            dimension "variant"
+            applicationId "com.udacity.gradle.builditbigger.free"
+        }
+        paid {
+            dimension "variant"
+            applicationId "com.udacity.gradle.builditbigger.paid"
+        }
+    }
 }
 
 dependencies {
