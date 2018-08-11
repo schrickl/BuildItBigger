@@ -6,16 +6,13 @@ import android.widget.TextView;
 
 public class JokeDisplayerActivity extends AppCompatActivity {
 
-    private String mTheJoke;
-    private TextView mJokeView;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_joke_teller);
 
-        mJokeView = findViewById(R.id.tv_joke);
-        mTheJoke = getIntent().getStringExtra(getResources().getString(R.string.joke_extra));
+        TextView mJokeView = findViewById(R.id.tv_joke);
+        String mTheJoke = getIntent().getStringExtra(getResources().getString(R.string.joke_extra));
         if (mTheJoke != null) {
             mJokeView.setText(mTheJoke);
         } else {

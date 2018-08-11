@@ -1,5 +1,5 @@
 <resources>
     <string name="app_name">jokeDisplayerAndroidLib</string>
     <string name="joke_extra">theJoke</string>
-    <string name="joke_error">I\'m sorry. That joke was too bad to display</string>
+    <string name="joke_error">That joke could not be displayed!</string>
 </resources>
