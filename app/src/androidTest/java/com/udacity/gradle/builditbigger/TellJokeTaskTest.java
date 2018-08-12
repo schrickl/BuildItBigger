@@ -25,7 +25,6 @@ public class TellJokeTaskTest {
             protected void onPostExecute(String s) {
                 Assert.assertNotEquals("", s);
                 Assert.assertNotNull(s);
-                Assert.assertEquals(jp.getJoke(), s);
                 signal.countDown();
             }
         }.execute((Context)null);
